@@ -1,3 +1,47 @@
-h1 {
-  color: red;
+:root {
+  --dark-blue: #558dca;
+  --light-blue: #adc5d8;
+  --light-grey: #e5e5e5;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarContainer {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-right: 50px;
+}
+
+.navTitles {
+  font-size: 48px;
+  color: white;
+}
+
+.firstSectionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.centerMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  font-weight: 600;
 }
