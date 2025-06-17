@@ -5,43 +5,127 @@
 }
 
 body {
-  font-family: "Manrope", sans-serif;
   margin: 0;
+  font-family: "Manrope", sans-serif;
   background-color: var(--light-blue);
-  display: flex;
-  flex-direction: column;
 }
 
-.navbarContainer {
+/* Navbar */
+.navBar {
+  height: 50px;
   background-color: var(--dark-blue);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
 }
 
-.navigationContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  margin-right: 50px;
-}
-
-.navTitles {
-  font-size: 48px;
-  color: white;
-}
-
-.firstSectionContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.centerMainContainer {
+/* Main Section */
+.mainSection {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 350px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-container-phone {
+  flex: 1;
+  max-width: 350px;
+  margin-top: 30px;
+  display: none;
+}
+
+.image-container-phone img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex: 2;
   text-align: center;
-  font-weight: 600;
+  max-width: 800px;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.text-container h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-container h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 30px;
+  background-color: var(--dark-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 36px;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  transition: background 0.3s;
+  width: fit-content;
+  align-self: center;
+}
+
+.cta-button:hover {
+  background-color: #5a00d1;
+}
+
+/* Animations Section */
+.animationsSection {
+  padding: 40px 20px;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.imageGrid img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Responsive: 2 columns on screens ≤ 768px */
+@media (max-width: 768px) {
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imageGrid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+  .image-container-phone {
+    display: block;
+  }
 }
