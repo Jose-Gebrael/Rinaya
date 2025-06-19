@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isolated Dropdowns</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dropdownGrid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 800px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .dropdownWrapper {
+      width: 48%;
+    }
+
+    .dropdown {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-header {
+      padding: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #e9e9e9;
+      position: relative;
+    }
+
+    .dropdown-header::after {
+      content: "▶";
+      position: absolute;
+      right: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown.open .dropdown-header::after {
+      transform: rotate(90deg);
+    }
+
+    .dropdown-content {
+      height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      transition: height 0.3s ease, padding 0.3s ease;
+    }
+
+    .dropdown.open .dropdown-content {
+      padding-bottom: 15px;
+    }
+
+    @media (max-width: 640px) {
+      .dropdownWrapper {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdownGrid">
+    <div class="dropdownWrapper">
+      <div class="dropdown" id="dropdown1">
+        <div class="dropdown-header" onclick="toggleDropdown('dropdown1')">Dropdown 1 Title</div>
+        <div class="dropdown-content">
+          <p>This is the content for dropdown 1.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdownWrapper">
+      <div class="dropdown" id="dropdown2">
+        <div class="dropdown-header" onclick="toggleDropdown('dropdown2')">Dropdown 2 Title</div>
+        <div class="dropdown-content">
+          <p>This is the content for dropdown 2. It expands correctly without affecting its row mate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdownWrapper">
+      <div class="dropdown" id="dropdown3">
+        <div class="dropdown-header" onclick="toggleDropdown('dropdown3')">Dropdown 3 Title</div>
+        <div class="dropdown-content">
+          <p>This is the content for dropdown 3.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdownWrapper">
+      <div class="dropdown" id="dropdown4">
+        <div class="dropdown-header" onclick="toggleDropdown('dropdown4')">Dropdown 4 Title</div>
+        <div class="dropdown-content">
+          <p>This is the content for dropdown 4.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const content = dropdown.querySelector('.dropdown-content');
+      const isOpen = dropdown.classList.contains('open');
+
+      if (isOpen) {
+        content.style.height = '0px';
+        dropdown.classList.remove('open');
+      } else {
+        content.style.height = content.scrollHeight + 'px';
+        dropdown.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
