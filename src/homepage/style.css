@@ -599,6 +599,31 @@ body {
   .checkboxes {
     margin-left: 0;
   }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0;
+  }
+  .footer-logo img {
+    height: 40px;
+  }
+  .footer-nav a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .footer-right {
+    margin-top: 5%;
+    padding: 20px;
+  }
+  .social-icon + span {
+    font-size: 5vw;
+  }
+  .social-icon {
+    width: 8vw;
+    height: 8vw;
+  }
 }
 
 @media (max-width: 1024px) {
