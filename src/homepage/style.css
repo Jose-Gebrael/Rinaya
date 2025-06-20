@@ -2,6 +2,9 @@
   --dark-blue: #558dca;
   --light-blue: #adc5d8;
   --light-grey: #e5e5e5;
+  --purple-button: #5a00d1;
+  --darker-blue: #3a6ca1;
+  --dark-grey-labels: #222;
 }
 
 body {
@@ -12,8 +15,76 @@ body {
 
 /* Navbar */
 .navBar {
-  height: 50px;
   background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 8%;
+  position: relative;
+}
+
+.navLogo {
+  height: 120px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 48px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5vw;
+}
+
+/* Burger icon hidden by default */
+.burger {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Burger menu overlay */
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-blue);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+.burgerlinks {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 80%;
+}
+
+.burgerMenu a {
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+  background-color: var(--purple-button);
+  padding: 5%;
+}
+.closeBurger {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Main Section */
@@ -77,7 +148,7 @@ body {
   display: inline-block;
   padding: 16px 30px;
   background-color: var(--dark-blue);
-  color: #fff;
+  color: white;
   font-weight: 700;
   font-size: 36px;
   text-decoration: none;
@@ -89,7 +160,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #5a00d1;
+  background-color: var(--purple-button);
 }
 
 /* Animations Section */
@@ -129,7 +200,8 @@ body {
 .aboutSection p {
   font-size: 36px;
   text-align: center;
-  padding: 16px;
+  padding: 0 16px;
+  margin: 0;
 }
 
 .aboutFAQContainer {
@@ -154,7 +226,7 @@ body {
 }
 
 .aboutfaqItem {
-  background-color: #558dca;
+  background-color: var(--dark-blue);
   color: white;
   border-radius: 20px;
   margin-bottom: 12px;
@@ -174,6 +246,10 @@ body {
   cursor: pointer;
   position: relative;
   padding-right: 32px;
+}
+.aboutfaqToggle:hover {
+  background-color: var(--darker-blue);
+  text-decoration: underline;
 }
 
 .aboutfaqToggle::after {
@@ -229,6 +305,9 @@ body {
 .FAQ-text-container h1 {
   font-size: 48px;
 }
+.FAQ-text-container .mobilefaq {
+  display: none;
+}
 
 .FAQContainer {
   display: flex;
@@ -280,7 +359,7 @@ body {
 .faqToggle::after {
   content: "▶";
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
   transition: transform 0.3s ease;
@@ -337,7 +416,7 @@ body {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 32px;
-  color: #222;
+  color: var(--dark-grey-labels);
 }
 
 .formGroup input {
@@ -396,14 +475,14 @@ body {
   height: 24px;
   width: 24px;
   border-radius: 6px;
-  border: 2px solid #3f88f4;
+  border: 2px solid var(--dark-blue);
   display: inline-block;
   position: relative;
   transition: all 0.2s ease;
 }
 
 .customRadio input[type="radio"]:checked + .checkmark {
-  background-color: #3f88f4;
+  background-color: var(--dark-blue);
 }
 
 .customRadio input[type="radio"]:checked + .checkmark::after {
@@ -449,12 +528,12 @@ body {
 }
 
 .submitButton:hover {
-  background-color: #5a00d1;
+  background-color: var(--purple-button);
 }
 
 /* Footer */
 .footer {
-  background-color: #5389c9;
+  background-color: var(--dark-blue);
   color: white;
   padding: 40px;
   display: flex;
@@ -520,7 +599,7 @@ body {
 .social-icon {
   width: 48px;
   height: 48px;
-  background-color: #e6ecf2;
+  background-color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -534,14 +613,14 @@ body {
 .social-icon.youtube::before {
   content: "▶"; /* Placeholder - replace with actual icon or use FontAwesome */
   font-size: 16px;
-  color: #3f88f4;
+  color: var(--dark-blue);
 }
 
 .social-icon.linkedin::before {
   content: "in";
   font-size: 14px;
   font-weight: bold;
-  color: #3f88f4;
+  color: var(--dark-blue);
 }
 
 .social-icon.instagram::before {
@@ -552,6 +631,45 @@ body {
 .social-icon.tiktok::before {
   content: "🎵";
   font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .aboutFAQContainer {
+    flex-direction: column;
+  }
+  .aboutFAQs {
+    width: auto;
+  }
+  .faqToggle {
+    font-size: 28px;
+  }
+  .footer-right {
+    margin-top: 5%;
+  }
+
+  /* Mobile Styles */
+  .navBar {
+    height: 100px;
+  }
+
+  .navLogo {
+    height: 60px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    right: 24px;
+  }
+
+  .burgerMenu.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 768px) {
@@ -575,11 +693,12 @@ body {
 
   /* About Section */
   .aboutSection p {
-    font-size: 12px;
+    font-size: 14px;
+    padding: 0;
   }
 
   .aboutfaqToggle {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /* FAQ Section */
@@ -599,6 +718,26 @@ body {
   .checkboxes {
     margin-left: 0;
   }
+  .FAQ-text-container h1 {
+    display: none;
+  }
+  .FAQ-text-container .mobilefaq {
+    display: block;
+  }
+
+  /* interests */
+  .formGroup label {
+    font-size: 28px;
+  }
+  .formGroup input {
+    padding: 24px;
+  }
+  .sideInputs .formGroup label {
+    font-size: 28px;
+  }
+  .sideInputs .formGroup input {
+    padding: 24px;
+  }
 
   /* Footer */
   .footer {
@@ -614,7 +753,6 @@ body {
     transition: opacity 0.3s;
   }
   .footer-right {
-    margin-top: 5%;
     padding: 20px;
   }
   .social-icon + span {
@@ -623,15 +761,5 @@ body {
   .social-icon {
     width: 8vw;
     height: 8vw;
-  }
-}
-
-@media (max-width: 1024px) {
-  .aboutFAQContainer {
-    flex-direction: column;
-  }
-  .aboutFAQs {
-    width: auto;
-    margin-bottom: 30px;
   }
 }
