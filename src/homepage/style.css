@@ -531,6 +531,253 @@ body {
   background-color: var(--purple-button);
 }
 
+/* Review Section*/
+.reviewsSection {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reviewsSection h1 {
+  font-size: 48px;
+}
+.reviewsContainer {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+/* //////////////////////////////////// */
+/*=============== CARD ===============*/
+.ReviewSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  padding-block: 5rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  height: 600px;
+}
+
+.card__article {
+  position: relative;
+  border-radius: 10%;
+  background-color: white;
+  transition: transform 0.4s ease;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__article.swiper-slide {
+  transform: scale(0.9);
+}
+.card__article.swiper-slide-active {
+  transform: scale(0.9);
+}
+.card__article.swiper-slide-next {
+  transform: scale(1.05);
+}
+.card__article.swiper-slide-prev {
+  transform: scale(0.9);
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__name {
+  font-size: 20px;
+  color: var(--second-color);
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+.dividerWithoutText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-weight: bold;
+  content: "";
+  border-top: 2px solid #333;
+  margin-right: 10px;
+}
+
+.dividerWithText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.dividerWithText::before {
+  content: "";
+  flex: 1; /* 25% */
+  border-top: 2px solid #333;
+  margin-right: 10px;
+}
+
+.dividerWithText::after {
+  content: "";
+  flex: 3; /* 75% */
+  border-top: 2px solid #333;
+  margin-left: 10px;
+}
+.badge {
+  position: absolute;
+  top: -100px;
+  left: 30px;
+  color: black;
+  padding: 4px 8px;
+  font-size: 300px;
+  font-weight: 600;
+  z-index: 100000 !important;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 90%;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+/* //////////////////////////////////// */
+
+/* .carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+  z-index: 1;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.activeCard {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 48px;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 3;
+}
+
+.arrow:hover {
+  color: #000;
+}
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+} */
+
 /* Footer */
 .footer {
   background-color: var(--dark-blue);
