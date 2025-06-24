@@ -14,77 +14,6 @@ body {
 }
 
 /*////////////////////////////////////*/
-/*============= NAVBAR ===============*/
-/*////////////////////////////////////*/
-.navBar {
-  background-color: var(--dark-blue);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2% 8%;
-  position: relative;
-}
-.navLogo {
-  height: 120px;
-}
-.navLinks {
-  display: flex;
-  gap: 48px;
-}
-.navLinks a {
-  color: white;
-  text-decoration: none;
-  font-size: 2.5vw;
-}
-.navLinks a:hover {
-  color: var(--purple-button);
-}
-.burger {
-  display: none;
-  font-size: 32px;
-  color: white;
-  cursor: pointer;
-}
-.burgerMenu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--dark-blue);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 999;
-}
-.burgerlinks {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 80%;
-}
-.burgerMenu a {
-  color: white;
-  font-size: 32px;
-  text-decoration: none;
-  background-color: var(--purple-button);
-  padding: 5%;
-}
-.closeBurger {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-}
-
-/*////////////////////////////////////*/
 /*=============== MAIN ===============*/
 /*////////////////////////////////////*/
 .mainSection {
@@ -164,8 +93,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.imageGrid img {
-  width: 50%;
+.imageGrid a {
   margin: 0 auto;
 }
 
@@ -631,96 +559,6 @@ body {
 }
 
 /*////////////////////////////////////*/
-/*============= FOOTER ==============*/
-/*////////////////////////////////////*/
-.footer {
-  background-color: var(--dark-blue);
-  color: white;
-  padding: 40px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 32px;
-  font-weight: 600;
-}
-.footer-logo img {
-  height: 120px;
-}
-.footer-nav {
-  display: flex;
-  gap: 32px;
-  font-size: 20px;
-}
-.footer-nav a {
-  font-size: 48px;
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-.footer-nav a:hover {
-  color: var(--purple-button);
-  opacity: 0.8;
-}
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.footer-social {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 50px 50px;
-}
-.social-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.social-icon {
-  width: 48px;
-  height: 48px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social-icon + span {
-  font-size: 32px;
-}
-.social-icon.youtube::before {
-  content: "▶";
-  font-size: 16px;
-  color: var(--dark-blue);
-}
-.social-icon.linkedin::before {
-  content: "in";
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--dark-blue);
-}
-.social-icon.instagram::before {
-  content: "📸";
-  font-size: 16px;
-}
-.social-icon.tiktok::before {
-  content: "🎵";
-  font-size: 16px;
-}
-
-/*////////////////////////////////////*/
 /*========= CARS TRANSFORM ===========*/
 /*////////////////////////////////////*/
 @media screen and (max-width: 1120px) {
@@ -752,28 +590,6 @@ body {
 /*////////////////////////////////////*/
 @media (max-width: 1024px) {
   /*////////////////////////////////////*/
-  /*============= NAVBAR ===============*/
-  /*////////////////////////////////////*/
-  .navBar {
-    height: 100px;
-  }
-  .navLogo {
-    height: 60px;
-  }
-  .navLinks {
-    display: none;
-  }
-  .burger {
-    display: block;
-    position: absolute;
-    right: 24px;
-  }
-  .burgerMenu.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /*////////////////////////////////////*/
   /*============= ABOUT ================*/
   /*////////////////////////////////////*/
   .aboutFAQContainer {
@@ -793,13 +609,6 @@ body {
     border-radius: 50px;
     height: fit-content;
     min-height: auto;
-  }
-
-  /*////////////////////////////////////*/
-  /*============ FOOTER ================*/
-  /*////////////////////////////////////*/
-  .footer-right {
-    margin-top: 5%;
   }
 }
 
@@ -877,35 +686,6 @@ body {
   }
   .sideInputs .formGroup input {
     padding: 24px;
-  }
-
-  /*////////////////////////////////////*/
-  /*============ FOOTER ================*/
-  /*////////////////////////////////////*/
-  .footer-right {
-    margin-top: 5%;
-  }
-  .footer {
-    padding: 40px 0;
-  }
-  .footer-logo img {
-    height: 40px;
-  }
-  .footer-nav a {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
-  }
-  .footer-right {
-    padding: 20px;
-  }
-  .social-icon + span {
-    font-size: 5vw;
-  }
-  .social-icon {
-    width: 8vw;
-    height: 8vw;
   }
 
   /*////////////////////////////////////*/
