@@ -13,7 +13,9 @@ body {
   background-color: var(--light-blue);
 }
 
-/* Navbar */
+/*////////////////////////////////////*/
+/*============= NAVBAR ===============*/
+/*////////////////////////////////////*/
 .navBar {
   background-color: var(--dark-blue);
   display: flex;
@@ -22,31 +24,27 @@ body {
   padding: 2% 8%;
   position: relative;
 }
-
 .navLogo {
   height: 120px;
 }
-
 .navLinks {
   display: flex;
   gap: 48px;
 }
-
 .navLinks a {
   color: white;
   text-decoration: none;
   font-size: 2.5vw;
 }
-
-/* Burger icon hidden by default */
+.navLinks a:hover {
+  color: var(--purple-button);
+}
 .burger {
   display: none;
   font-size: 32px;
   color: white;
   cursor: pointer;
 }
-
-/* Burger menu overlay */
 .burgerMenu {
   position: fixed;
   top: 0;
@@ -70,7 +68,6 @@ body {
   gap: 24px;
   width: 80%;
 }
-
 .burgerMenu a {
   color: white;
   font-size: 32px;
@@ -87,7 +84,9 @@ body {
   cursor: pointer;
 }
 
-/* Main Section */
+/*////////////////////////////////////*/
+/*=============== MAIN ===============*/
+/*////////////////////////////////////*/
 .mainSection {
   display: flex;
   flex-direction: column;
@@ -99,30 +98,25 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .image-container {
   flex: 1;
   max-width: 350px;
 }
-
 .image-container img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .image-container-phone {
   flex: 1;
   max-width: 350px;
   margin-top: 30px;
   display: none;
 }
-
 .image-container-phone img {
   width: 100%;
   height: auto;
 }
-
 .text-container {
   display: flex;
   flex: 2;
@@ -131,19 +125,16 @@ body {
   flex-direction: column;
   gap: 25px;
 }
-
 .text-container h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
-
 .text-container h2 {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 30px;
 }
-
 .cta-button {
   display: inline-block;
   padding: 16px 30px;
@@ -158,28 +149,29 @@ body {
   width: fit-content;
   align-self: center;
 }
-
 .cta-button:hover {
   background-color: var(--purple-button);
 }
 
-/* Animations Section */
+/*////////////////////////////////////*/
+/*============= SERVICES =============*/
+/*////////////////////////////////////*/
 .animationsSection {
   padding: 40px 20px;
 }
-
 .imageGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
 .imageGrid img {
   width: 50%;
   margin: 0 auto;
 }
 
-/* About Section */
+/*////////////////////////////////////*/
+/*============== ABOUT ===============*/
+/*////////////////////////////////////*/
 .aboutSection {
   display: flex;
   flex-direction: column;
@@ -196,14 +188,12 @@ body {
   font-size: 48px;
   margin-bottom: 0;
 }
-
 .aboutSection p {
   font-size: 36px;
   text-align: center;
   padding: 0 16px;
   margin: 0;
 }
-
 .aboutFAQContainer {
   display: flex;
   flex-direction: row;
@@ -211,12 +201,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-
 .aboutFAQContainer p {
   text-align: left;
   font-size: 24px;
 }
-
 .aboutFAQs {
   display: flex;
   flex-direction: column;
@@ -224,7 +212,6 @@ body {
   flex-wrap: wrap;
   width: 45%;
 }
-
 .aboutfaqItem {
   background-color: var(--dark-blue);
   color: white;
@@ -233,10 +220,9 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .aboutfaqToggle {
   width: 100%;
-  padding: 16px;
+  padding: 24px;
   text-align: left;
   background: none;
   border: none;
@@ -251,37 +237,31 @@ body {
   background-color: var(--darker-blue);
   text-decoration: underline;
 }
-
 .aboutfaqToggle::after {
-  content: "▶"; /* Arrow pointing right */
+  content: "▶";
   position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
   transition: transform 0.3s ease;
 }
-
 .aboutfaqContent {
   max-height: 0;
   overflow: hidden;
   padding: 0 16px;
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
-
 .aboutfaqItem.open .aboutfaqContent {
   padding: 0 16px 16px;
-  max-height: 500px; /* Adjust based on content */
+  max-height: 500px;
 }
-
 .aboutfaqItem.open .aboutfaqToggle::after {
-  transform: translateY(-50%) rotate(-90deg); /* Pointing down */
+  transform: translateY(-50%) rotate(-90deg);
 }
-
 .aboutFAQImage {
   flex: 1 1 300px;
   max-width: 600px;
 }
-
 .aboutFAQImage img {
   width: 100%;
   height: auto;
@@ -289,51 +269,46 @@ body {
   display: block;
 }
 
-/* FAQ Section */
+/*////////////////////////////////////*/
+/*=============== FAQ ================*/
+/*////////////////////////////////////*/
 .FAQSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .FAQ-text-container {
   display: flex;
   align-items: center;
   flex: 1;
 }
-
 .FAQ-text-container h1 {
   font-size: 48px;
 }
 .FAQ-text-container .mobilefaq {
   display: none;
 }
-
 .FAQContainer {
   display: flex;
   padding: 40px;
   justify-content: space-evenly;
   align-items: center;
 }
-
 .FAQContainer p {
   text-align: left;
   font-size: 24px;
   flex-direction: column;
   align-items: center;
 }
-
 .FAQs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
   width: 100%;
 }
-
 .faqWrapper {
   width: 100%;
 }
-
 .faqItem {
   background-color: white;
   color: black;
@@ -341,7 +316,6 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .faqToggle {
   width: 100%;
   padding: 32px;
@@ -355,7 +329,6 @@ body {
   position: relative;
   padding-right: 32px;
 }
-
 .faqToggle::after {
   content: "▶";
   position: absolute;
@@ -364,7 +337,6 @@ body {
   transform: translateY(-50%) rotate(90deg);
   transition: transform 0.3s ease;
 }
-
 .faqContent {
   max-height: 0;
   overflow: hidden;
@@ -372,26 +344,24 @@ body {
   transition: max-height 0.4s ease, padding 0.4s ease;
   flex-grow: 1;
 }
-
 .faqItem.open .faqContent {
   padding: 0 16px 16px;
   max-height: 500px;
 }
-
 .faqItem.open .faqToggle::after {
   transform: translateY(-50%) rotate(-90deg);
 }
 
-/* Form Section */
+/*////////////////////////////////////*/
+/*=============== FORM ===============*/
+/*////////////////////////////////////*/
 .formSection {
   padding: 40px 20px;
 }
-
 .formSection h1 {
   font-size: 48px;
   justify-self: center;
 }
-
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -399,26 +369,22 @@ body {
   padding: 20px;
   margin: 0 auto;
 }
-
 .formRow {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .formGroup {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
 .formGroup label {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 32px;
   color: var(--dark-grey-labels);
 }
-
 .formGroup input {
   padding: 32px;
   border: none;
@@ -427,28 +393,26 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 .fullWidth {
   width: 100%;
 }
 
-/* Interests Section */
+/*////////////////////////////////////*/
+/*============= INTERESTS ============*/
+/*////////////////////////////////////*/
 .interestSection {
   margin-top: 40px;
 }
-
 .interestSection h1 {
   font-size: 48px;
   text-align: center;
 }
-
 .interestGrid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
 }
-
 .checkboxes {
   display: flex;
   flex-direction: column;
@@ -457,7 +421,6 @@ body {
   min-width: 250px;
   margin-left: 50px;
 }
-
 .customRadio {
   display: flex;
   align-items: center;
@@ -466,11 +429,9 @@ body {
   cursor: pointer;
   user-select: none;
 }
-
 .customRadio input[type="radio"] {
   display: none;
 }
-
 .customRadio .checkmark {
   height: 24px;
   width: 24px;
@@ -480,11 +441,9 @@ body {
   position: relative;
   transition: all 0.2s ease;
 }
-
 .customRadio input[type="radio"]:checked + .checkmark {
   background-color: var(--dark-blue);
 }
-
 .customRadio input[type="radio"]:checked + .checkmark::after {
   content: "✔";
   position: absolute;
@@ -493,7 +452,6 @@ body {
   font-size: 16px;
   color: white;
 }
-
 .sideInputs {
   display: flex;
   flex-direction: column;
@@ -501,11 +459,9 @@ body {
   flex: 1;
   min-width: 300px;
 }
-
 .sideInputs .formGroup label {
   font-size: 32px;
 }
-
 .sideInputs .formGroup input {
   padding: 32px;
   border-radius: 20px;
@@ -513,7 +469,6 @@ body {
   font-size: 16px;
   width: 100%;
 }
-
 .submitButton {
   align-self: flex-end;
   padding: 12px 24px;
@@ -526,62 +481,48 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 }
-
 .submitButton:hover {
   background-color: var(--purple-button);
 }
 
-/* Review Section*/
-.reviewsSection {
-  padding: 60px 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+/*////////////////////////////////////*/
+/*============= REVIEWS ==============*/
+/*////////////////////////////////////*/
+.ReviewSection {
+  text-align: center;
 }
-.reviewsSection h1 {
+.ReviewSection {
   font-size: 48px;
 }
-.reviewsContainer {
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-}
-/* //////////////////////////////////// */
-/*=============== CARD ===============*/
-.ReviewSection {
-  display: flex;
+.ReviewContainer {
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
-
-.card__container {
+/* .card__container {
   padding-block: 5rem;
-}
-
+} */
 .card__content {
   margin-inline: 1.75rem;
   border-radius: 1.25rem;
   overflow: hidden;
 }
-
 .swiper-wrapper {
   display: flex;
   align-items: center;
   height: 600px;
 }
-
 .card__article {
   position: relative;
   border-radius: 10%;
   background-color: white;
   transition: transform 0.4s ease;
-  height: 500px;
+  height: fit-content;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .card__article.swiper-slide {
   transform: scale(0.9);
 }
@@ -594,7 +535,6 @@ body {
 .card__article.swiper-slide-prev {
   transform: scale(0.9);
 }
-
 .card__data {
   background-color: var(--container-color);
   padding: 1.5rem 2rem;
@@ -603,14 +543,12 @@ body {
   position: relative;
   z-index: 10;
 }
-
 .card__name {
   font-size: 20px;
   color: var(--second-color);
   margin-bottom: 0.75rem;
   text-align: left;
 }
-
 .card__description {
   font-weight: 500;
   margin-bottom: 1.75rem;
@@ -618,38 +556,37 @@ body {
   font-size: 14px;
 }
 
-/* Swiper class */
+/*////////////////////////////////////*/
+/*========== SWIPER CLASS ============*/
+/*////////////////////////////////////*/
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: "";
 }
-
 .swiper-button-prev,
 .swiper-button-next {
   width: initial;
   height: initial;
   font-size: 3rem;
   color: var(--second-color);
-  display: none;
+  display: block;
 }
-
 .swiper-button-prev {
   left: 0;
 }
-
 .swiper-button-next {
   right: 0;
 }
-
 .swiper-pagination-bullet {
   background-color: hsl(212, 32%, 40%);
   opacity: 1;
 }
-
 .swiper-pagination-bullet-active {
   background-color: var(--second-color);
 }
-
+/*////////////////////////////////////*/
+/*============= DIVIDER ==============*/
+/*////////////////////////////////////*/
 .dividerWithoutText {
   display: flex;
   align-items: center;
@@ -661,7 +598,6 @@ body {
   border-top: 2px solid #333;
   margin-right: 10px;
 }
-
 .dividerWithText {
   display: flex;
   align-items: center;
@@ -669,15 +605,14 @@ body {
   margin: 20px 0;
   color: #333;
   font-weight: bold;
+  font-size: 32px;
 }
-
 .dividerWithText::before {
   content: "";
   flex: 1; /* 25% */
   border-top: 2px solid #333;
   margin-right: 10px;
 }
-
 .dividerWithText::after {
   content: "";
   flex: 3; /* 75% */
@@ -695,90 +630,9 @@ body {
   z-index: 100000 !important;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 320px) {
-  .card__data {
-    padding: 1rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 768px) {
-  .card__content {
-    margin-inline: 3rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: block;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1120px) {
-  .card__container {
-    max-width: 90%;
-  }
-
-  .swiper-button-prev {
-    left: -1rem;
-  }
-  .swiper-button-next {
-    right: -1rem;
-  }
-}
-/* //////////////////////////////////// */
-
-/* .carousel {
-  display: flex;
-  align-items: center;
-  position: relative;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  transition: all 0.5s ease;
-  opacity: 0.5;
-  transform: scale(0.9);
-  z-index: 1;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
-.activeCard {
-  width: 300px;
-  height: 300px;
-  opacity: 1;
-  transform: scale(1.05);
-  z-index: 2;
-}
-
-.arrow {
-  background: none;
-  border: none;
-  font-size: 48px;
-  color: #444;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  z-index: 3;
-}
-
-.arrow:hover {
-  color: #000;
-}
-.cardWrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-} */
-
-/* Footer */
+/*////////////////////////////////////*/
+/*============= FOOTER ==============*/
+/*////////////////////////////////////*/
 .footer {
   background-color: var(--dark-blue);
   color: white;
@@ -788,13 +642,11 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-
 .footer-left {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .footer-logo {
   display: flex;
   align-items: center;
@@ -803,46 +655,39 @@ body {
   font-size: 32px;
   font-weight: 600;
 }
-
 .footer-logo img {
   height: 120px;
 }
-
 .footer-nav {
   display: flex;
   gap: 32px;
   font-size: 20px;
 }
-
 .footer-nav a {
   font-size: 48px;
   color: white;
   text-decoration: none;
   transition: opacity 0.3s;
 }
-
 .footer-nav a:hover {
+  color: var(--purple-button);
   opacity: 0.8;
 }
-
 .footer-right {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .footer-social {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 50px 50px;
 }
-
 .social-item {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .social-icon {
   width: 48px;
   height: 48px;
@@ -855,32 +700,82 @@ body {
 .social-icon + span {
   font-size: 32px;
 }
-
-/* You can use background images or SVGs here */
 .social-icon.youtube::before {
-  content: "▶"; /* Placeholder - replace with actual icon or use FontAwesome */
+  content: "▶";
   font-size: 16px;
   color: var(--dark-blue);
 }
-
 .social-icon.linkedin::before {
   content: "in";
   font-size: 14px;
   font-weight: bold;
   color: var(--dark-blue);
 }
-
 .social-icon.instagram::before {
   content: "📸";
   font-size: 16px;
 }
-
 .social-icon.tiktok::before {
   content: "🎵";
   font-size: 16px;
 }
 
+/*////////////////////////////////////*/
+/*========= CARS TRANSFORM ===========*/
+/*////////////////////////////////////*/
+@media screen and (max-width: 1120px) {
+  .card__container {
+    max-width: 90%;
+  }
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+  .card__article.swiper-slide {
+    transform: scale(0.9);
+  }
+  .card__article.swiper-slide-active {
+    transform: scale(1);
+  }
+  .card__article.swiper-slide-next {
+    transform: scale(0.9);
+  }
+  .card__article.swiper-slide-prev {
+    transform: scale(0.9);
+  }
+}
+
+/*////////////////////////////////////*/
+/*============= < 1024px =============*/
+/*////////////////////////////////////*/
 @media (max-width: 1024px) {
+  /*////////////////////////////////////*/
+  /*============= NAVBAR ===============*/
+  /*////////////////////////////////////*/
+  .navBar {
+    height: 100px;
+  }
+  .navLogo {
+    height: 60px;
+  }
+  .navLinks {
+    display: none;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 24px;
+  }
+  .burgerMenu.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*////////////////////////////////////*/
+  /*============= ABOUT ================*/
+  /*////////////////////////////////////*/
   .aboutFAQContainer {
     flex-direction: column;
   }
@@ -890,37 +785,28 @@ body {
   .faqToggle {
     font-size: 28px;
   }
+
+  /*////////////////////////////////////*/
+  /*============ REVIEWS ================*/
+  /*////////////////////////////////////*/
+  .card__article {
+    border-radius: 50px;
+    height: fit-content;
+    min-height: auto;
+  }
+
+  /*////////////////////////////////////*/
+  /*============ FOOTER ================*/
+  /*////////////////////////////////////*/
   .footer-right {
     margin-top: 5%;
-  }
-
-  /* Mobile Styles */
-  .navBar {
-    height: 100px;
-  }
-
-  .navLogo {
-    height: 60px;
-  }
-
-  .navLinks {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-    position: absolute;
-    right: 24px;
-  }
-
-  .burgerMenu.show {
-    opacity: 1;
-    visibility: visible;
   }
 }
 
 @media (max-width: 768px) {
-  /* Main Section */
+  /*////////////////////////////////////*/
+  /*============== MAIN ================*/
+  /*////////////////////////////////////*/
   .image-container {
     display: none;
   }
@@ -928,7 +814,9 @@ body {
     display: block;
   }
 
-  /* Animations Section */
+  /*////////////////////////////////////*/
+  /*============ SERVICES ==============*/
+  /*////////////////////////////////////*/
   .imageGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -938,17 +826,20 @@ body {
     object-fit: cover;
   }
 
-  /* About Section */
+  /*////////////////////////////////////*/
+  /*============= ABOUT ================*/
+  /*////////////////////////////////////*/
   .aboutSection p {
     font-size: 14px;
     padding: 0;
   }
-
   .aboutfaqToggle {
     font-size: 16px;
   }
 
-  /* FAQ Section */
+  /*////////////////////////////////////*/
+  /*============== FAQ =================*/
+  /*////////////////////////////////////*/
   .faqItem {
     flex: 0 1 100%;
   }
@@ -972,7 +863,9 @@ body {
     display: block;
   }
 
-  /* interests */
+  /*////////////////////////////////////*/
+  /*============ INTERESTS =============*/
+  /*////////////////////////////////////*/
   .formGroup label {
     font-size: 28px;
   }
@@ -986,7 +879,12 @@ body {
     padding: 24px;
   }
 
-  /* Footer */
+  /*////////////////////////////////////*/
+  /*============ FOOTER ================*/
+  /*////////////////////////////////////*/
+  .footer-right {
+    margin-top: 5%;
+  }
   .footer {
     padding: 40px 0;
   }
@@ -1008,5 +906,29 @@ body {
   .social-icon {
     width: 8vw;
     height: 8vw;
+  }
+
+  /*////////////////////////////////////*/
+  /*============ REVIEWS ===============*/
+  /*////////////////////////////////////*/
+  .card__content {
+    margin-inline: 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .footer-nav a {
+    font-size: 20px;
+  }
+  .badge {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .ReviewContainer {
+    height: auto;
+  }
+  .card__data {
+    padding: 1rem;
   }
 }
