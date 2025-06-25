@@ -1,0 +1,14 @@
+:root {
+  --dark-blue: #558dca;
+  --light-blue: #adc5d8;
+  --light-grey: #e5e5e5;
+  --purple-button: #5a00d1;
+  --darker-blue: #3a6ca1;
+  --dark-grey-labels: #222;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--light-blue);
+}
