@@ -39,7 +39,6 @@ body {
   flex: 1;
   max-width: 350px;
 }
-
 .video-container video {
   width: 100%;
   height: auto;
@@ -95,6 +94,30 @@ body {
   padding: 10px;
   font-size: 24px;
 }
+.innderDescriptionRight p {
+  padding-left: 20px;
+}
+.innerTitle {
+  display: flex;
+  flex-direction: row;
+}
+.titleIMGContainer {
+  flex: 1;
+  max-width: 150px;
+}
+.titleIMGContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.titleText {
+  flex: 3;
+}
+.titleText h1 {
+  color: var(--dark-blue);
+  text-align: center;
+}
+/* .titleText h2 {} */
 .icon-text {
   display: flex;
   align-items: center;
@@ -117,7 +140,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .price-button {
   padding: 10px 20px;
   border: 2px solid var(--dark-blue);
@@ -128,7 +150,6 @@ body {
   font-size: 32px;
   transition: background 0.3s, color 0.3s;
 }
-
 .session-button {
   padding: 10px 40px;
   background: var(--dark-blue);
@@ -140,9 +161,30 @@ body {
   font-weight: bold;
   transition: background 0.3s;
 }
-
 .session-button:hover {
   background-color: var(--purple-button);
+}
+
+.warning {
+  background-color: white;
+  border-radius: 50px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 60px;
+  margin-bottom: 40px;
+}
+.warning h1 {
+  color: red;
+  font-size: 32px;
+  text-align: left;
+}
+.warning h2 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 35px;
 }
 
 /* Responsive: Stack buttons under 768px */
@@ -157,5 +199,8 @@ body {
   .description {
     flex-direction: column;
     padding: 5%;
+  }
+  .titleIMGContainer {
+    display: none;
   }
 }
