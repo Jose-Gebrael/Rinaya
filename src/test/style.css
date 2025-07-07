@@ -1,0 +1,68 @@
+:root {
+  --dark-blue: #558dca;
+  --light-blue: #adc5d8;
+  --light-grey: #e5e5e5;
+  --purple-button: #5a00d1;
+  --darker-blue: #3a6ca1;
+  --dark-grey-labels: #222;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--light-blue);
+}
+
+.separator {
+  width: 95%;
+  height: 1px;
+  background-color: var(--light-blue);
+  margin: 20px auto;
+}
+.descriptionLeft h1 {
+  font-size: 2.5rem;
+}
+.descriptionLeft p {
+  font-size: 1.75rem;
+}
+
+.descriptionRight {
+  background-color: white;
+  border-radius: 35px;
+}
+.innerDescriptionRight {
+  border: 3px solid var(--dark-blue);
+  border-radius: 35px;
+}
+.innerTitle {
+  display: flex;
+  flex-direction: row;
+}
+.titleIMGContainer {
+  flex: 1;
+  max-width: 150px;
+  margin: 2%;
+}
+.titleIMGContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.titleText {
+  flex: 3;
+  align-content: center;
+}
+.titleText h1 {
+  color: var(--dark-blue);
+  text-align: center;
+}
+.icon-text {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 15px;
+}
+.icon-text i {
+  color: var(--dark-blue);
+  font-size: 24px;
+}

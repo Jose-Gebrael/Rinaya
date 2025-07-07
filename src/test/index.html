@@ -2,132 +2,197 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!--=============== REMIXICONS ===============-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
-   <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/styles.css">
-
-   <title>Responsive card slider - Bedimcode</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/RinayaIcon.png" type="image/icon type">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <title>Rinaya Services</title>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./style.css">
+    <!--=============== NAVBAR ===============-->
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <!--=============== FOOTER ===============-->
+    <link rel="stylesheet" href="../CSS/footer.css">
 </head>
 
 <body>
-   <section class="container">
-      <div class="card__container swiper">
-         <div class="card__content">
-            <div class="swiper-wrapper">
-               <article class="card__article swiper-slide">
-                  <div class="card__image">
-                     <img src="assets/img/avatar-1.png" alt="image" class="card__img">
-                     <div class="card__shadow"></div>
-                  </div>
 
-                  <div class="card__data">
-                     <h3 class="card__name">Kell Dawx</h3>
-                     <p class="card__description">
-                        Passionate about development and design,
-                        I carry out projects at the request of users.
-                     </p>
+    <!-- //////////////////////////////////////// -->
+    <!-- ================ NAVBAR =================-->
+    <!-- //////////////////////////////////////// -->
+    <div class="navBar">
+        <img src="../images/RinayaLogo.png" class="navLogo" alt="Rinaya Logo" />
 
-                     <a href="#" class="card__button">View More</a>
-                  </div>
-               </article>
+        <div class="navLinks">
+            <a href="#">Choose a topic</a>
+            <a href="#">Book a call</a>
+            <a href="#">Legal</a>
+        </div>
 
-               <article class="card__article swiper-slide">
-                  <div class="card__image">
-                     <img src="assets/img/avatar-2.png" alt="image" class="card__img">
-                     <div class="card__shadow"></div>
-                  </div>
+        <div class="burger" id="burger">
+            &#9776;
+        </div>
 
-                  <div class="card__data">
-                     <h3 class="card__name">Lotw Fox</h3>
-                     <p class="card__description">
-                        Passionate about development and design,
-                        I carry out projects at the request of users.
-                     </p>
-
-                     <a href="#" class="card__button">View More</a>
-                  </div>
-               </article>
-
-               <article class="card__article swiper-slide">
-                  <div class="card__image">
-                     <img src="assets/img/avatar-3.png" alt="image" class="card__img">
-                     <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                     <h3 class="card__name">Sara Mit</h3>
-                     <p class="card__description">
-                        Passionate about development and design,
-                        I carry out projects at the request of users.
-                     </p>
-
-                     <a href="#" class="card__button">View More</a>
-                  </div>
-               </article>
-
-               <article class="card__article swiper-slide">
-                  <div class="card__image">
-                     <img src="assets/img/avatar-4.png" alt="image" class="card__img">
-                     <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                     <h3 class="card__name">Jenny Wert</h3>
-                     <p class="card__description">
-                        Passionate about development and design,
-                        I carry out projects at the request of users.
-                     </p>
-
-                     <a href="#" class="card__button">View More</a>
-                  </div>
-               </article>
-
-               <article class="card__article swiper-slide">
-                  <div class="card__image">
-                     <img src="assets/img/avatar-5.png" alt="image" class="card__img">
-                     <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                     <h3 class="card__name">Lexa Kin</h3>
-                     <p class="card__description">
-                        Passionate about development and design,
-                        I carry out projects at the request of users.
-                     </p>
-
-                     <a href="#" class="card__button">View More</a>
-                  </div>
-               </article>
+        <div class="burgerMenu" id="burgerMenu">
+            <span class="closeBurger" id="closeBurger">&times;</span>
+            <div class="burgerlinks">
+                <a href="#">Choose a topic</a>
+                <a href="#">Book a call</a>
+                <a href="#">Legal</a>
             </div>
-         </div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////////// -->
+    <!-- ================ NAVBAR =================-->
+    <!-- //////////////////////////////////////// -->
 
-         <!-- Navigation buttons -->
-         <div class="swiper-button-next">
-            <i class="ri-arrow-right-s-line"></i>
-         </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 offset-2 my-5">
+                <h1 style="text-align: center;">The Modern Dating Bootcamp</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 col-xl-5 offset-sm-1 descriptionLeft">
+                <!-- <h1 class="text-center text-xl-start mb-3"><b>Master the New Dating Game for Men</b></h1>
+                <p>Become the man women want, without wasting years feeling lost, rejected, or invisible.</p>
+                <p>If you're struggling with dating, you've been misled.</p>
+                <p>The game has changed, but most men stay unprepared, distracted by work, hobbies, video games or
+                    excuses, hoping the right one will magically appear.</p>
+                <p>In the past, you've likely settled for whoever showed interest, even if you weren't attracted to
+                    them.</p>
+                <p>This is about to change in just 6 sessions!</p> -->
+                <h1 class="text-center mb-3"><i class="fa-solid fa-people-arrows"></i></h1>
+                <h1 class="text-center mb-3  offset-2 col-8">Master the New Dating Game for Men</i></h1>
+                <p class="text-center col-10 offset-1">Become the man women want, without wasting years feeling lost,
+                    rejected, or
+                    invisible.</p>
+                <div style="background-color: rgba(255, 255, 255, 0.7); border-radius: 25px; width: fit-content;" class="mx-auto">
+                    <p class="text-center col-10 offset-1">If you're struggling with dating, you're been misled!</p>
+                    <p class="col-8 offset-2">
+                        <i class="fa-solid fa-check"></i>
+                        Distracted by work or hobbies
+                    </p>
+                    <p class="col-8 offset-2">
+                        <i class="fa-solid fa-check"></i>
+                        Focuses on excuses
+                    </p>
+                    <p class="col-8 offset-2">
+                        <i class="fa-solid fa-check"></i>
+                        Waiting for the right one to appear
+                    </p>
+                    <p class="col-10 offset-1">This is about to change in just 6 sessions!</p>
+                </div>
+            </div>
+            <div class="col-sm-10 col-xl-5 descriptionRight mb-5 p-3 offset-sm-1 offset-xl-0">
+                <div class="innerDescriptionRight">
+                    <div class="innerTitle mb-5">
+                        <div class="titleIMGContainer">
+                            <img src="../images/circle200x200.png" alt="circle">
+                        </div>
+                        <div class="titleText">
+                            <h1>Here's What You Get</h1>
+                        </div>
+                    </div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>The Magnetic Man Transformation Blueprint</b><br>
+                            Develop the character, confidence, and self-worth that makes you naturally attractive before
+                            you even start speaking.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>Online Dating Profile Overhaul</b><br>
+                            Your dating profile is your modern-day resume. We'll fix your photos, your bio, and your
+                            presence so you stand out immediately.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>The Social Circle Audit System</b><br>
+                            We'll analyze your current life setup, your friends, routines, and environment and
+                            restructure it to naturally expose you to individuals you want to attract.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>First Date Playbook</b><br>
+                            You'll learn how to confidently approach, ask out, and land meaningful first dates by
+                            showing up as your best self, without waiting for your life to be perfect.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>Dating Strategy Tailored to Your Goals</b><br>
+                            Whether you want a life partner or prefer casual dating, you'll have a clear, step-by-step
+                            game plan designed for your desired outcome.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="icon-text">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>
+                            <b>Dating Philosophy Deep Dive</b><br>
+                            We will work on understanding what dating represents to you, how you can get the most out of
+                            it and how to approach future dating senarios.
+                        </span>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-         <div class="swiper-button-prev">
-            <i class="ri-arrow-left-s-line"></i>
-         </div>
+    <!-- //////////////////////////////////////// -->
+    <!-- ================ FOOTER =================-->
+    <!-- //////////////////////////////////////// -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="../images/RinayaLogo.png" alt="Rinaya Logo" />
+            </div>
+            <nav class="footer-nav">
+                <a href="#">Choose a topic</a>
+                <a href="#">Book a call</a>
+                <a href="#">Legal</a>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <div class="social-item">
+                    <div class="social-icon youtube"></div>
+                    <span>Lorem</span>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon linkedin"></div>
+                    <span>Lorem</span>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon instagram"></div>
+                    <span>Lorem</span>
+                </div>
+                <div class="social-item">
+                    <div class="social-icon tiktok"></div>
+                    <span>Lorem</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //////////////////////////////////////// -->
+    <!-- ================ FOOTER =================-->
+    <!-- //////////////////////////////////////// -->
 
-         <!-- Pagination -->
-         <div class="swiper-pagination"></div>
-      </div>
-   </section>
-
-   <!--=============== SWIPER JS ===============-->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-   <!--=============== MAIN JS ===============-->
-   <script src="assets/js/main.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>

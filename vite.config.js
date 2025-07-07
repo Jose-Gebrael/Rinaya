@@ -14,6 +14,7 @@ export default defineConfig({
         main: resolve(root, 'index.html'),
         services: resolve(root, 'services', 'index.html'),
         payment: resolve(root, 'payment', 'index.html'),
+        test: resolve(root, 'test', 'index.html'),
       }
     }
   }

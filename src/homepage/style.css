@@ -29,7 +29,6 @@ body {
 }
 .image-container {
   flex: 1;
-  max-width: 350px;
 }
 .image-container img {
   width: 100%;
@@ -95,6 +94,14 @@ body {
 }
 .imageGrid a {
   margin: 0 auto;
+}
+.imageGrid img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+.imageGrid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px purple;
 }
 
 /*////////////////////////////////////*/
